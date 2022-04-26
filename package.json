@@ -1,13 +1,17 @@
 {
   "name": "mui-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple React Scripts & Javascript",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx ./src",
-    "lint:fix": "eslint --fix --ext .js,.jsx ./src"
+    "lint:fix": "eslint --fix --ext .js,.jsx ./src",
+    "release": "standard-version --no-verify",
+    "release:minor": "standard-version --no-verify --release-as minor",
+    "release:patch": "standard-version --no-verify --release-as patch",
+    "release:major": "standard-version --no-verify --release-as major"
   },
   "eslintConfig": {
     "extends": [
@@ -63,9 +67,12 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "babel-eslint": "^10.1.0",
+    "commitlint-plugin-function-rules": "^1.6.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -76,7 +83,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "json": "^11.0.0",
     "prettier": "^2.5.1",
+    "standard-version": "^9.3.2",
     "typescript": "^4.4.4"
   }
 }
